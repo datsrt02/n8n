@@ -17,5 +17,5 @@ export EXTERNAL_IP="$(curl http://localhost:4040/api/tunnels | jq ".tunnels[0].p
 echo Got Ngrok URL = $EXTERNAL_IP
 echo "--------- 🔴 Finish Ngrok setup -----------"
 echo "--------- 🟢 Start Docker compose up  -----------"
-sudo -E docker compose up -d --restart unless-stopped
+sudo -E docker compose up -d
 echo "--------- 🔴 Finish! Wait a few minutes and test in browser at url $EXTERNAL_IP for n8n UI -----------"
